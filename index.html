@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>Gallery</h2>
+        <div class="nav-links">
+            <input type="text" class="search-bar" placeholder="Search images...">
+            <a href="#" class="nav-link">Login</a>
+            <a href="#" class="nav-link">Register</a>
+            <a href="#" class="nav-link">Help</a>
+        </div>
+    </nav>
+    <div class="classes">
+        <ul>
+            <li>@Nature</li>
+            <li>@Humans</li>
+            <li>@Cars</li>
+            <li>@Sunset</li>
+            <li>@Dogs</li>
+            <li>@Water</li>
+            <li>@Sea</li>
+            <li>@Grass</li>
+            <li>@Garden</li>
+            <li>@Trees</li>
+        </ul>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-wrapper">
+        <h1 class="gallery-title"> Images </h1>
+
+        <!-- Image Upload Section -->
+        <div class="upload-section">
+            <label for="file-input" class="upload-btn">Add Images</label>
+            <input type="file" id="file-input" accept="image/*" multiple>
+        </div>
+
+        
+        <div class="gallery-grid" id="gallery-grid">
+            
+            <div class="thumbnail-wrapper">
+                <img src="images/img1.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 1">
+                <button class="delete-btn" onclick="deleteImage(0)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img2.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 2">
+                <button class="delete-btn" onclick="deleteImage(1)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img3.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 3">
+                <button class="delete-btn" onclick="deleteImage(2)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img4.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 4">
+                <button class="delete-btn" onclick="deleteImage(3)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img5.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 5">
+                <button class="delete-btn" onclick="deleteImage(4)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img6.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 6">
+                <button class="delete-btn" onclick="deleteImage(5)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img7.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 7">
+                <button class="delete-btn" onclick="deleteImage(6)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img8.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 8">
+                <button class="delete-btn" onclick="deleteImage(7)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img9.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 9">
+                <button class="delete-btn" onclick="deleteImage(8)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img10.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 10">
+                <button class="delete-btn" onclick="deleteImage(9)">&#128465;</button>
+            </div>
+            <!-- Remaining images till 25 -->
+            <div class="thumbnail-wrapper">
+                <img src="images/img11.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 11">
+                <button class="delete-btn" onclick="deleteImage(10)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img12.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 12">
+                <button class="delete-btn" onclick="deleteImage(11)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img13.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 13">
+                <button class="delete-btn" onclick="deleteImage(12)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img14.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 14">
+                <button class="delete-btn" onclick="deleteImage(13)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img15.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 15">
+                <button class="delete-btn" onclick="deleteImage(14)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img16.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 16">
+                <button class="delete-btn" onclick="deleteImage(15)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img17.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 17">
+                <button class="delete-btn" onclick="deleteImage(16)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img18.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 18">
+                <button class="delete-btn" onclick="deleteImage(17)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img19.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 19">
+                <button class="delete-btn" onclick="deleteImage(18)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img20.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 20">
+                <button class="delete-btn" onclick="deleteImage(19)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img21.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 21">
+                <button class="delete-btn" onclick="deleteImage(20)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img22.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 22">
+                <button class="delete-btn" onclick="deleteImage(21)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img23.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 23">
+                <button class="delete-btn" onclick="deleteImage(22)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img24.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 24">
+                <button class="delete-btn" onclick="deleteImage(23)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img25.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(24)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img26.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 26">
+                <button class="delete-btn" onclick="deleteImage(25)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img27.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(26)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img28.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(27)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img29.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(28)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img30.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(29)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img31.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(30)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img32.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(31)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img33.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(32)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img34.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(33)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img35.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(34)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img36.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(35)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img37.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(36)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img38.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(37)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img39.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(38)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img40.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(39)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img41.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(40)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img42.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(41)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img43.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(42)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img44.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(43)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img45.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(44)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img46.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(45)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img47.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(46)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img48.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(47)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img49.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(48)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img50.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 25">
+                <button class="delete-btn" onclick="deleteImage(49)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img51.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 51">
+                <button class="delete-btn" onclick="deleteImage(50)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img52.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 52">
+                <button class="delete-btn" onclick="deleteImage(51)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img53.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 53">
+                <button class="delete-btn" onclick="deleteImage(52)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img54.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 54">
+                <button class="delete-btn" onclick="deleteImage(53)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img55.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 55">
+                <button class="delete-btn" onclick="deleteImage(54)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img56.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 56">
+                <button class="delete-btn" onclick="deleteImage(55)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img57.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 57">
+                <button class="delete-btn" onclick="deleteImage(56)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img58.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 58">
+                <button class="delete-btn" onclick="deleteImage(57)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img59.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 59">
+                <button class="delete-btn" onclick="deleteImage(58)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img60.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 60">
+                <button class="delete-btn" onclick="deleteImage(59)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img61.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 61">
+                <button class="delete-btn" onclick="deleteImage(60)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img62.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 62">
+                <button class="delete-btn" onclick="deleteImage(61)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img63.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 63">
+                <button class="delete-btn" onclick="deleteImage(62)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img64.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 64">
+                <button class="delete-btn" onclick="deleteImage(63)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img65.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 65">
+                <button class="delete-btn" onclick="deleteImage(64)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img66.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 66">
+                <button class="delete-btn" onclick="deleteImage(65)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img67.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 67">
+                <button class="delete-btn" onclick="deleteImage(66)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img68.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 68">
+                <button class="delete-btn" onclick="deleteImage(67)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img69.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 69">
+                <button class="delete-btn" onclick="deleteImage(68)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img70.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 70">
+                <button class="delete-btn" onclick="deleteImage(69)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img71.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 71">
+                <button class="delete-btn" onclick="deleteImage(70)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img72.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 72">
+                <button class="delete-btn" onclick="deleteImage(71)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img73.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 73">
+                <button class="delete-btn" onclick="deleteImage(72)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img74.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 74">
+                <button class="delete-btn" onclick="deleteImage(73)">&#128465;</button>
+            </div>
+            <div class="thumbnail-wrapper">
+                <img src="images/img75.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Thumbnail 75">
+                <button class="delete-btn" onclick="deleteImage(74)">&#128465;</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
